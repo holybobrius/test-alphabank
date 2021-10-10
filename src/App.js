@@ -18,18 +18,10 @@ function App() {
       })
     })
   }, [])
-  console.log(data)
+  console.log(data.results)
   return (
     <div className="App">
-      <ul>
-        {data.map(el => {
-          console.log(el.quote)
-          return(
-            <li>{el.quote}</li>
-          )
-          
-        })}
-      </ul>
+      {data.results.map(el => <p>{el.name} {el.url}</p>)}
     </div>
   );
 }

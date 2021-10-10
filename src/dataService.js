@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url= 'https://placebear.com/200/300'
+const url= 'https://pokeapi.co/api/v2/pokemon'
 
 const getAll = async () => {
   const response = await axios.get(url, {
