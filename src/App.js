@@ -21,6 +21,15 @@ function App() {
   console.log(data)
   return (
     <div className="App">
+      <ul>
+        {data.map(el => {
+          console.log(el.quote)
+          return(
+            <li>{el.quote}</li>
+          )
+          
+        })}
+      </ul>
     </div>
   );
 }

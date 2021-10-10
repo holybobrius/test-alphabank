@@ -1,12 +1,12 @@
 import axios from 'axios'
 
-const url= 'https://http.cat/404'
+const url= 'https://placebear.com/200/300'
 
 const getAll = async () => {
-  const response = await fetch(url, {
-    mode: 'cors'
+  const response = await axios.get(url, {
+    headers: {'Access-Control-Allow-Origin': '*'}
   })
-  return response.json()
+  return response.data
 }
 
 export default { getAll }
