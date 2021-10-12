@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
-import logo from './logo.svg';
 import dataService from './dataService';
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
-import store from './store';
+import Card from './components/Card';
 
 function App() {
 
@@ -17,11 +16,19 @@ function App() {
         data: res
       })
     })
-  }, [])
-  console.log(data.results)
+  }, [dispatch])
+  console.log(data)
   return (
     <div className="App">
-      {data.results.map(el => <p>{el.name} {el.url}</p>)}
+      {data ? data.map(el => 
+        <Card 
+          name={el.name}
+          weight={el.info.weight}
+          height={el.info.height}
+          img={el.info.sprites.front_default}
+          abilities={el.info.abilities} 
+          key={el.name} 
+        />) : ''}
     </div>
   );
 }

@@ -6,8 +6,4 @@ const reducer = (state = [], action) => {
     }
 }
 
-export const initializeData = () => {
-  
-}
-
 export default reducer
