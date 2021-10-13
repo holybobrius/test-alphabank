@@ -8,7 +8,7 @@ const getAll = async () => {
   })
   const data = response.data.results.map(async el => {
     const info = await axios.get(el.url)
-    return { name: el.name, info: info.data }
+    return { name: el.name, info: info.data, liked: false }
   })
   const results = await Promise.all(data)
   return results

@@ -1,21 +1,145 @@
-.App {
+body {
+  background: url('./assets/bg.png');
+}
+
+.card-container {
   display: grid;
   grid-template-columns: repeat(6, 250px);
   gap: 30px;
-  background-color: #212121;
 }
 
 .card {
-  background-color: white;
-  width: 200px;
-  height: 300px;
+  background-color: #282828;
+  width: 220px;
+  height: 350px;
   border: 2px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
+  border-radius: 30px;
+}
+
+.title-container {
+  background-color: #404040;
+  width: 100%;
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.stats-container {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+
+  height: 10%;
+}
+
+.abilities-container {
+  width: 100%;
+  text-align: center;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.like {
+  left: 35%;
+  top: 30%;
+  position: relative;
+  display: inline-block;
+  font-size: 26px;
+  border-radius: 50px;
+  border-style: none;
+  color: #404040;
+  cursor: pointer;
 }
 
 p {
   padding: 0;
   margin: 0;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+img {
+  background-color: white;
+  border-radius: 50%;
+}
+
+strong {
+  text-decoration: underline;
+}
+
+ul {
+  text-align: left;
 }
