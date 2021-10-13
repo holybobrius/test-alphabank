@@ -4,8 +4,27 @@ body {
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(6, 250px);
+  grid-template-columns: repeat(5, 250px);
   gap: 30px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.switch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 .card {
@@ -13,17 +32,13 @@ body {
   width: 220px;
   height: 350px;
   border: 2px solid black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
   border-radius: 30px;
 }
 
 .title-container {
   background-color: #404040;
   width: 100%;
-  height: 55%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,8 +53,8 @@ body {
   width: 100%;
   justify-content: center;
   align-content: center;
-
   height: 10%;
+  margin-top: 10px;
 }
 
 .abilities-container {
@@ -111,15 +126,26 @@ input:checked + .slider:before {
 }
 
 .like {
-  left: 35%;
-  top: 30%;
-  position: relative;
-  display: inline-block;
+  width: 37px;
+  height: 37px;
   font-size: 26px;
   border-radius: 50px;
   border-style: none;
   color: #404040;
   cursor: pointer;
+  transition: 200ms;
+}
+
+.like:hover {
+  color: #2e2d2d
+}
+
+.header-container {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-between;
 }
 
 p {
@@ -128,7 +154,8 @@ p {
 }
 
 h3 {
-  margin-top: 0;
+  margin: 0;
+  text-transform: capitalize;
 }
 
 img {
@@ -138,8 +165,13 @@ img {
 
 strong {
   text-decoration: underline;
+  font-size: 18px;
 }
 
 ul {
   text-align: left;
+}
+
+li {
+  line-height: 25px;
 }

@@ -33,10 +33,14 @@ function App() {
 
   return (
     <div className="App">
-      <label class="switch">
-        <input onChange={() => setFiltered(!filtered)} type="checkbox" />
-        <span class="slider round"></span>
-      </label>
+      <div className='switch-container'>
+        <label class="switch">
+          <input onChange={() => setFiltered(!filtered)} type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+        <label>Понравившиеся</label>
+      </div>
+      <p>Используемое API: <a target="_blank" rel="noopener noreferrer" href='https://pokeapi.co/'>pokeapi.co</a></p>
       <div className='card-container'>
         {!filtered ? data.map(el => 
           <Card 
