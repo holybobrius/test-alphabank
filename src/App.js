@@ -46,7 +46,7 @@ function App() {
             img={el.info.sprites.front_default}
             abilities={el.info.abilities} 
             key={el.name}
-            liked={el}
+            liked={el.liked}
             handleClick={() => like(el)} 
           />) : data.filter(n => n.liked).map(el => 
             <Card 
@@ -56,7 +56,7 @@ function App() {
             img={el.info.sprites.front_default}
             abilities={el.info.abilities} 
             key={el.name}
-            liked={el}
+            liked={el.liked}
             handleClick={() => like(el)} 
           />
           )}
